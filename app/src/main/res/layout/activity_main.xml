@@ -9,37 +9,121 @@ This is the layout file
         Constrain Layouts etc.
 
 -->
-<RelativeLayout
+
+<!--LL linear Layout-->
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.basicapp.MainActivity">
+    tools:context="com.example.basicapp.MainActivity"
+    android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/TY"
-        android:layout_width="wrap_content"
+    <!--a linear Layout-->
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello Worldugguigkugkgkgkkjhkjhkjhj!"
-        android:textSize="22sp"
-        />
+        android:weightSum="100"
+        android:orientation="horizontal">
 
-    <EditText
+        <!--a-45 text view-->
+        <TextView
+            android:id="@+id/a45"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="45"
+            android:textSize="59sp"
+            android:layout_weight="45"
+            />
+        <!--a-40 text view-->
+        <TextView
+            android:id="@+id/a40"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="40"
+            android:textSize="22sp"
+            android:layout_weight="40"
+            />
+        <!--a-15 text view-->
+        <TextView
+            android:id="@+id/a15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="15"
+            android:textSize="22sp"
+            android:layout_weight="45"
+            />
+
+    </LinearLayout>
+
+    <!--b linear Layout-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="100">
+        <!--b-55 text view-->
+        <TextView
+            android:id="@+id/b55"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="55"
+            android:textSize="22sp"
+            android:layout_weight="55"
+            />
+
+
+        <!--b-35 text view-->
+        <TextView
+            android:id="@+id/b35"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="35"
+            android:textSize="22sp"
+            android:layout_weight="40"
+            />
+
+    </LinearLayout>
+
+    <!--c linear Layout-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <!--c-800 text view-->
+        <TextView
+            android:id="@+id/c800"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="800"
+            android:textSize="22sp"
+            />
+
+        <!--c-1 text view-->
+        <TextView
+            android:id="@+id/c1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1"
+            android:textSize="22sp"
+            />
+
+    </LinearLayout>
+
+
+
+
+    <!--<EditText
         android:id="@+id/ET"
         android:layout_width="wrap_content"
         android:layout_height="match_parent" />
-
+-->
 
     <Button
         android:id="@+id/BT"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/TY"
-        android:layout_marginTop="117dp"
-        android:layout_toEndOf="@+id/ET"
-        android:layout_toRightOf="@+id/ET"
         android:text="g,jfjhvjhvhjmbmbm" />
 
 
-</RelativeLayout>
+</LinearLayout>
